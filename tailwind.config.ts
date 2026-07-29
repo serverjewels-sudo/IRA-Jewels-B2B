@@ -20,7 +20,13 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        serif: ["var(--font-cormorant-normal)", "var(--font-cormorant-italic)", "serif"],
+        serif: ["var(--font-cormorant-normal)", "serif"],
+        "serif-italic": ["var(--font-cormorant-italic)", "serif"],
+      },
+      keyframes: {
+        heroScale: {
+          to: { transform: "scale(1)" },
+        },
       },
     },
   },
