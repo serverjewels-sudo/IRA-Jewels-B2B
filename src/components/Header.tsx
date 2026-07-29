@@ -27,7 +27,9 @@ export default function Header() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919023454014";
 
   return (
-    <>
+    <div className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
+      isScrolled ? "-translate-y-[30px]" : "translate-y-0"
+    }`}>
       {/* Top Strip */}
       <div className="h-[30px] bg-ira-teal text-ira-pale-teal text-[10px] tracking-[0.08em] uppercase flex items-center">
         <div className="w-[min(1320px,calc(100%-56px))] mx-auto flex justify-between items-center">
@@ -50,10 +52,10 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`fixed top-[30px] left-0 right-0 h-[88px] z-50 border-b transition-all duration-300 ease-in-out ${
+        className={`border-b transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "top-0 bg-ira-ivory/95 backdrop-blur-md border-ira-border h-[76px] text-ira-teal"
-            : "border-white/15 text-white"
+            ? "h-[76px] bg-white border-ira-border text-ira-teal"
+            : "h-[88px] bg-transparent border-white/15 text-white"
         }`}
       >
         <div className="w-[min(1320px,calc(100%-56px))] mx-auto h-full grid grid-cols-[1fr_auto] lg:grid-cols-[240px_1fr_auto] items-center gap-6">
@@ -122,6 +124,6 @@ export default function Header() {
           <span>Backed by Divine Star</span>
         </div>
       </div>
-    </>
+    </div>
   );
 }
