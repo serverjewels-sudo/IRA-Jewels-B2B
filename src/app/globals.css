@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal: #01435D;
+  --gold: #B29E67;
+  --ivory: #F8F7F2;
+  --white: #FFFFFF;
+  --pale-teal: #E8F0F2;
+  --gold-beige: #EEE8D9;
+  --text-dark: #1D2529;
+  --text-muted: #687278;
+  --border: #DDE2E3;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--text-dark);
+}
