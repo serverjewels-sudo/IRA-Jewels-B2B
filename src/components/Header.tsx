@@ -59,7 +59,7 @@ export default function Header() {
         }`}
       >
         <div className="w-[min(1320px,calc(100%-56px))] mx-auto h-full grid grid-cols-[1fr_auto] lg:grid-cols-[240px_1fr_auto] items-center gap-6">
-          <Link href="#home" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <span className="font-serif text-3xl font-semibold tracking-wide whitespace-nowrap">IRA JEWELS</span>
             <span className={`text-[9px] tracking-[0.11em] uppercase leading-tight pl-3 border-l ${isScrolled ? 'text-ira-muted border-ira-border' : 'text-white/70 border-white/25'}`}>
               backed by<br />Divine Star
@@ -67,9 +67,15 @@ export default function Header() {
           </Link>
 
           <nav className="hidden lg:flex justify-center gap-6 text-[11px] uppercase tracking-[0.08em]">
-            {["About", "Capabilities", "Process", "Categories", "Quality", "Sustainability", "Insights", "Contact"].map((item) => (
-              <Link key={item} href={`#${item.toLowerCase()}`} className="relative group py-2">
-                {item}
+            {[
+              { name: "About", href: "/about" },
+              { name: "Manufacturing", href: "/manufacturing" },
+              { name: "Products", href: "/products" },
+              { name: "Insights", href: "/insights" },
+              { name: "Contact", href: "/contact" }
+            ].map((item) => (
+              <Link key={item.name} href={item.href} className="relative group py-2">
+                {item.name}
                 <span className="absolute left-0 bottom-0 w-0 h-px bg-ira-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
@@ -83,7 +89,7 @@ export default function Header() {
             }`}>
               Apply for Trade Account
             </Link>
-            <Link href="#contact" className={`hidden lg:flex items-center justify-center gap-2 h-10 px-4 border text-[11px] uppercase tracking-[0.08em] transition-all duration-300 hover:-translate-y-0.5 ${
+            <Link href="/contact" className={`hidden lg:flex items-center justify-center gap-2 h-10 px-4 border text-[11px] uppercase tracking-[0.08em] transition-all duration-300 hover:-translate-y-0.5 ${
               isScrolled 
                 ? "bg-ira-teal text-white border-ira-teal hover:bg-ira-teal/90" 
                 : "bg-white text-ira-teal border-white hover:bg-white/90"
@@ -110,9 +116,15 @@ export default function Header() {
         isMenuOpen ? "translate-y-0" : "-translate-y-full"
       }`}>
         <nav className="grid gap-4">
-          {["About", "Capabilities", "Process", "Categories", "Quality", "Sustainability", "Insights", "Contact"].map((item) => (
-            <Link key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsMenuOpen(false)} className="font-serif text-4xl leading-none text-ira-teal">
-              {item}
+          {[
+              { name: "About", href: "/about" },
+              { name: "Manufacturing", href: "/manufacturing" },
+              { name: "Products", href: "/products" },
+              { name: "Insights", href: "/insights" },
+              { name: "Contact", href: "/contact" }
+          ].map((item) => (
+            <Link key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="font-serif text-4xl leading-none text-ira-teal">
+              {item.name}
             </Link>
           ))}
           <Link href="/apply" onClick={() => setIsMenuOpen(false)} className="font-serif text-4xl leading-none text-ira-gold mt-4">

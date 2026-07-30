@@ -17,29 +17,25 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] tracking-[0.12em] uppercase text-ira-gold mb-4">Company</h4>
             <nav className="grid gap-[10px] text-[13px]">
-              <Link href="#about" className="hover:text-white transition-colors">About Ira</Link>
-              <Link href="#facility" className="hover:text-white transition-colors">Facility</Link>
-              <Link href="#quality" className="hover:text-white transition-colors">Quality</Link>
-              <Link href="#responsibility" className="hover:text-white transition-colors">Responsibility</Link>
+              <Link href="/about" className="hover:text-white transition-colors">About Ira</Link>
             </nav>
           </div>
 
           <div>
             <h4 className="text-[10px] tracking-[0.12em] uppercase text-ira-gold mb-4">Expertise</h4>
             <nav className="grid gap-[10px] text-[13px]">
-              <Link href="#capabilities" className="hover:text-white transition-colors">Capabilities</Link>
-              <Link href="#process" className="hover:text-white transition-colors">Our Process</Link>
-              <Link href="#categories" className="hover:text-white transition-colors">Categories</Link>
-              <Link href="#contact" className="hover:text-white transition-colors">Start a Project</Link>
+              <Link href="/manufacturing" className="hover:text-white transition-colors">Manufacturing</Link>
+              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Start a Project</Link>
             </nav>
           </div>
 
           <div>
             <h4 className="text-[10px] tracking-[0.12em] uppercase text-ira-gold mb-4">Connect</h4>
             <nav className="grid gap-[10px] text-[13px]">
-              <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
-              <Link href="#insights" className="hover:text-white transition-colors">Insights</Link>
-              <Link href="#home" className="hover:text-white transition-colors">Back to Top</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="/insights" className="hover:text-white transition-colors">Insights</Link>
+              <Link href="/" className="hover:text-white transition-colors">Back to Top</Link>
             </nav>
           </div>
         </div>
