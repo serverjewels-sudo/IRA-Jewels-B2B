@@ -219,7 +219,7 @@ export default function ContactForm() {
 
         {isSuccess && (
           <div ref={successRef} className="mt-[18px] border border-[#7c986f] bg-[#edf4e9] p-4 text-[#36512c] animate-in fade-in slide-in-from-bottom-2 duration-500">
-            <strong>Thank you — we'll be in touch shortly.</strong>
+            <strong>Thank you — we&apos;ll be in touch shortly.</strong>
           </div>
         )}
       </form>
