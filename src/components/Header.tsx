@@ -11,9 +11,18 @@ export default function Header() {
   const isHome = pathname === "/";
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 40);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
@@ -33,7 +42,7 @@ export default function Header() {
   const isSolid = !isHome || isScrolled;
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
+    <div className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out antialiased will-change-transform ${
       isHome && isScrolled ? "-translate-y-[30px]" : "translate-y-0"
     }`}>
       {/* Top Strip - Only visible on Home */}
@@ -60,7 +69,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`border-b transition-all duration-300 ease-in-out ${
+        className={`border-b transition-colors duration-300 ease-in-out ${
           isSolid
             ? "h-[76px] bg-white border-ira-border text-ira-teal"
             : "h-[88px] bg-transparent border-white/15 text-white"
