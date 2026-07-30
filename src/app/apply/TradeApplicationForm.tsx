@@ -158,9 +158,9 @@ export default function TradeApplicationForm() {
           [type]: { path: data.path, name: file.name }
         }
       }))
-    } catch (err: any) {
+    } catch (err) {
       console.error(err)
-      setErrors(prev => ({ ...prev, [type]: err.message || 'Failed to upload document' }))
+      setErrors(prev => ({ ...prev, [type]: err instanceof Error ? err.message : 'Failed to upload document' }))
     } finally {
       setUploadingDocs(prev => ({ ...prev, [type]: false }))
       // Reset input value to allow re-uploading the same file if needed
