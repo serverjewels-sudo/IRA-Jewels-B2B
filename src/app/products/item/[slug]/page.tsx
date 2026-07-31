@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 function formatCategoryName(slug: string) {
   if (!slug) return '';
@@ -36,6 +37,9 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
   const relatedProducts = relatedProductsData || [];
   const categoryName = formatCategoryName(product.category);
 
+  const hasMainImage = product.images && product.images.length > 0;
+  const mainImageUrl = hasMainImage ? product.images[0] : getPlaceholderImage(product.category, 600);
+
   return (
     <div className="min-h-screen bg-ira-ivory flex flex-col">
       <Header />
@@ -63,18 +67,12 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
             {/* Left Column: Image */}
             <div className="w-full lg:w-1/2">
               <Reveal>
-                <div className="aspect-[4/5] bg-[#e5e0d7] w-full max-w-[600px] overflow-hidden">
-                  {product.image_url ? (
-                    <img 
-                      src={product.image_url} 
-                      alt={product.name || product.sku || 'Product Image'} 
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center text-ira-muted text-sm uppercase tracking-widest">
-                      Image Pending
-                    </div>
-                  )}
+                <div className="aspect-[4/5] bg-[#e5e0d7] w-full max-w-[600px] max-h-[600px] overflow-hidden">
+                  <img 
+                    src={mainImageUrl} 
+                    alt={product.name || product.sku || 'Product Image'} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Reveal>
             </div>
@@ -163,23 +161,21 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
               </h2>
               
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                {relatedProducts.map((related, index) => (
+                {relatedProducts.map((related, index) => {
+                  const hasImage = related.images && related.images.length > 0;
+                  const imageUrl = hasImage ? related.images[0] : getPlaceholderImage(product.category, 400);
+
+                  return (
                   <Reveal key={related.id || related.slug} delay={(index % 4) * 50}>
                     <article className="bg-white border border-ira-border hover:border-ira-gold transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
                       <Link href={`/products/item/${related.slug}`} className="flex flex-col flex-grow">
                         <div className="aspect-[4/5] bg-[#e5e0d7] overflow-hidden relative">
-                          {related.image_url ? (
-                            <img 
-                              src={related.image_url} 
-                              alt={related.sku || 'Product'} 
-                              className="w-full h-full object-cover"
-                              loading="lazy"
-                            />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center text-ira-muted text-[10px] uppercase tracking-widest p-4 text-center">
-                              Image Pending
-                            </div>
-                          )}
+                          <img 
+                            src={imageUrl} 
+                            alt={related.sku || 'Product'} 
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
                         </div>
                         
                         <div className="p-5 flex flex-col flex-grow">
@@ -209,7 +205,8 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
                       </Link>
                     </article>
                   </Reveal>
-                ))}
+                  );
+                })}
               </div>
             </Reveal>
           </section>

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 const VALID_CATEGORIES = [
   "rings", "earrings", "pendants", "necklaces", 
@@ -77,32 +78,34 @@ export default async function CategoryPage({ params }: { params: { category: str
             </Reveal>
           ) : (
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-              {productList.map((product, index) => (
+              {productList.map((product, index) => {
+                const hasImage = product.images && product.images.length > 0;
+                const imageUrl = hasImage ? product.images[0] : getPlaceholderImage(product.category || categorySlug, 400);
+
+                return (
                 <Reveal key={product.id || index} delay={(index % 4) * 50}>
                   <article className="bg-white border border-ira-border hover:border-ira-gold transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
-                    <div className="aspect-[4/5] bg-[#e5e0d7] overflow-hidden relative">
-                      {product.image_url ? (
+                    <Link href={`/products/item/${product.slug}`} className="block">
+                      <div className="aspect-[4/5] bg-[#e5e0d7] overflow-hidden relative">
                         <img 
-                          src={product.image_url} 
+                          src={imageUrl} 
                           alt={product.sku || 'Product'} 
                           className="w-full h-full object-cover"
                           loading="lazy"
                         />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-ira-muted text-[10px] uppercase tracking-widest p-4 text-center">
-                          Image Pending
-                        </div>
-                      )}
-                    </div>
+                      </div>
+                    </Link>
                     
                     <div className="p-5 flex flex-col flex-grow">
                       <div className="mb-4">
                         <span className="text-[11px] text-ira-gold uppercase tracking-[0.15em] font-bold block mb-1">
                           {product.category || categoryName}
                         </span>
-                        <h2 className="font-serif text-[22px] text-ira-text m-0 mb-1">
-                          {product.sku || 'N/A'}
-                        </h2>
+                        <Link href={`/products/item/${product.slug}`} className="hover:text-ira-teal transition-colors block">
+                          <h2 className="font-serif text-[22px] text-ira-text m-0 mb-1 hover:text-ira-teal transition-colors">
+                            {product.sku || 'N/A'}
+                          </h2>
+                        </Link>
                         {product.gold_purity && (
                           <p className="text-[13px] text-ira-muted m-0">
                             {product.gold_purity}
@@ -127,7 +130,8 @@ export default async function CategoryPage({ params }: { params: { category: str
                     </div>
                   </article>
                 </Reveal>
-              ))}
+                );
+              })}
             </div>
           )}
         </section>
