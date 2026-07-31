@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import PortalLogoutButton from '@/components/PortalLogoutButton'
+import AutoLogout from '@/components/AutoLogout'
 
 export default async function PortalLayout({ children }: { children: React.ReactNode }) {
   const supabase = createClient()
@@ -26,6 +27,7 @@ export default async function PortalLayout({ children }: { children: React.React
 
   return (
     <div className="min-h-screen bg-ira-ivory flex flex-col">
+      <AutoLogout redirectTo="/login" />
       {/* Top Header */}
       <header className="bg-ira-teal text-white sticky top-0 z-40">
         <div className="flex h-16 items-center justify-between px-6 border-b border-white/10">

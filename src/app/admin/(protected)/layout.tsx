@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import AdminSidebar from './AdminSidebar'
+import AutoLogout from '@/components/AutoLogout'
 
 export default async function AdminLayout({
   children,
@@ -27,6 +28,7 @@ export default async function AdminLayout({
 
   return (
     <div className="flex min-h-screen bg-ira-ivory font-sans">
+      <AutoLogout redirectTo="/admin/login" />
       <AdminSidebar />
       <main className="flex-1 min-w-0 overflow-y-auto">
         {children}
