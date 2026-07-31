@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import ApplicationActions from './ApplicationActions'
 
 export default async function ApplicationReviewPage({ params }: { params: { id: string } }) {
   const supabase = createClient()
@@ -195,6 +196,15 @@ export default async function ApplicationReviewPage({ params }: { params: { id: 
             </p>
           </section>
 
+          <ApplicationActions 
+            application={{
+              id: application.id,
+              status: application.status,
+              email: application.email,
+              trading_name: application.trading_name,
+              legal_business_name: application.legal_business_name
+            }} 
+          />
         </div>
       </div>
     </div>
