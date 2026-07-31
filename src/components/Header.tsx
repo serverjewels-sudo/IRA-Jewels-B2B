@@ -40,7 +40,6 @@ export default function Header() {
   
   // A helper for determining the visual state of the header
   const isSolid = !isHome || isScrolled || isMenuOpen;
-  console.log('isMenuOpen:', isMenuOpen, 'isScrolled:', isScrolled);
 
   return (
     <>
