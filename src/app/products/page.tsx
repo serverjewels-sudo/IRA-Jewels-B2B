@@ -22,7 +22,7 @@ export default function ProductsPage() {
       
       <main className="pt-[140px] pb-[120px] max-md:pt-[120px] max-md:pb-[78px]">
         {/* Page Header */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-16">
+        <section className="w-[calc(100%-56px)] mx-auto mb-16">
           <Reveal>
             <p className="text-[13px] text-ira-muted tracking-[0.08em] uppercase mb-4">
               <Link href="/" className="hover:text-ira-teal transition-colors">Home</Link>
@@ -40,7 +40,7 @@ export default function ProductsPage() {
         </section>
 
         {/* Category Grid */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-24">
+        <section className="w-[calc(100%-56px)] mx-auto mb-24">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {categories.map((cat, index) => (
               <Reveal key={cat.slug} delay={index * 50}>
@@ -68,7 +68,7 @@ export default function ProductsPage() {
         </section>
 
         {/* CTA Strip */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto">
+        <section className="w-[calc(100%-56px)] mx-auto">
           <Reveal>
             <div className="bg-ira-pale-teal border border-ira-border p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-6">
               <div>

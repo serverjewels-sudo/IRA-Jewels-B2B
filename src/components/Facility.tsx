@@ -4,7 +4,7 @@ import { getPlaceholderImage } from "@/lib/placeholders";
 export default function Facility() {
   return (
     <section className="py-[120px] max-md:py-[78px] bg-[#ddd8cf]" id="facility">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-[55px] lg:gap-[90px]">
+      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-[55px] lg:gap-[90px]">
         <div className="lg:sticky lg:top-[110px] self-start">
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Facility & Infrastructure</p>

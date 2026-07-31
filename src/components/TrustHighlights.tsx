@@ -47,7 +47,7 @@ const highlights = [
 export default function TrustHighlights() {
   return (
     <section className="bg-white py-14 border-b border-ira-border">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto">
+      <div className="w-[calc(100%-56px)] mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4 text-center">
           {highlights.map((item, i) => (
             <Reveal key={i} delay={i * 100}>

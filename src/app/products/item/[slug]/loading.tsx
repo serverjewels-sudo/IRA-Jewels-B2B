@@ -7,12 +7,12 @@ export default function Loading() {
       <Header />
       <main className="flex-grow pt-[140px] pb-[120px] max-md:pt-[120px] max-md:pb-[78px]">
         {/* Breadcrumb Skeleton */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-10">
+        <section className="w-[calc(100%-56px)] mx-auto mb-10">
           <div className="w-64 h-4 bg-gray-200 animate-pulse"></div>
         </section>
 
         {/* 2-Column Detail Skeleton */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-24">
+        <section className="w-[calc(100%-56px)] mx-auto mb-24">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
             {/* Left: Image Skeleton */}
             <div className="w-full lg:w-1/2">

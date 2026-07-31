@@ -52,7 +52,7 @@ export default function ManufacturingPage() {
       <main>
         {/* Page Header & Process Strip (Warm Ivory) */}
         <section className="bg-ira-ivory pt-[140px] pb-[80px] max-md:pt-[120px] max-md:pb-[60px]">
-          <div className="w-[min(1320px,calc(100%-56px))] mx-auto">
+          <div className="w-[calc(100%-56px)] mx-auto">
             <Reveal>
               <p className="text-[13px] text-ira-muted tracking-[0.08em] uppercase mb-4">
                 <Link href="/" className="hover:text-ira-teal transition-colors">Home</Link>
@@ -79,7 +79,7 @@ export default function ManufacturingPage() {
 
         {/* Capabilities (Original Dark Teal Styling) */}
         <section className="py-[120px] max-md:py-[78px] bg-ira-teal text-white">
-          <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-[38%_1fr] gap-[55px] lg:gap-[90px] items-start">
+          <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-[38%_1fr] gap-[55px] lg:gap-[90px] items-start">
             <aside className="lg:sticky lg:top-[120px]">
               <Reveal>
                 <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">End-to-End Jewellery Manufacturing</p>
@@ -110,7 +110,7 @@ export default function ManufacturingPage() {
 
         {/* Craftsmanship Film (Pale Teal) */}
         <section className="py-[120px] max-md:py-[78px] bg-ira-pale-teal">
-          <div className="w-[min(1320px,calc(100%-56px))] mx-auto flex max-md:flex-col justify-between md:items-end gap-6 mb-7">
+          <div className="w-[calc(100%-56px)] mx-auto flex max-md:flex-col justify-between md:items-end gap-6 mb-7">
             <div>
               <Reveal>
                 <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Craftsmanship Film</p>
@@ -128,7 +128,7 @@ export default function ManufacturingPage() {
           </div>
 
           <Reveal delay={300}>
-            <div className="w-[min(1320px,calc(100%-56px))] mx-auto relative h-[min(72vw,760px)] max-md:h-[68vh] max-md:min-h-[540px] overflow-hidden bg-[#222]">
+            <div className="w-[calc(100%-56px)] mx-auto relative h-[min(72vw,760px)] max-md:h-[68vh] max-md:min-h-[540px] overflow-hidden bg-[#222]">
               <img 
                 src={getPlaceholderImage("necklaces", 2070)} 
                 alt="Craftsmanship preview" 
@@ -158,7 +158,7 @@ export default function ManufacturingPage() {
 
         {/* Facility (Original Styling bg-[#ddd8cf]) */}
         <section className="py-[120px] max-md:py-[78px] bg-[#ddd8cf]">
-          <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-[55px] lg:gap-[90px]">
+          <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-[55px] lg:gap-[90px]">
             <div className="lg:sticky lg:top-[110px] self-start">
               <Reveal>
                 <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Facility & Infrastructure</p>
@@ -212,7 +212,7 @@ export default function ManufacturingPage() {
 
         {/* Quality (Warm Ivory) */}
         <section className="py-[120px] max-md:py-[78px] bg-ira-ivory overflow-hidden">
-          <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[35px] lg:gap-[90px] items-center">
+          <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[35px] lg:gap-[90px] items-center">
             <div className="order-2 lg:order-1">
               <Reveal>
                 <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Quality at Every Stage</p>

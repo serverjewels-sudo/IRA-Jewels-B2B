@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ApplyPage() {
   return (
     <main className="min-h-screen bg-ira-ivory pt-[120px] pb-24">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto">
+      <div className="w-[calc(100%-56px)] mx-auto">
         <div className="mb-12">
           <Link href="/" className="text-[11px] uppercase tracking-[0.1em] text-ira-teal/70 hover:text-ira-teal transition-colors mb-6 inline-block">
             &larr; Back to Home

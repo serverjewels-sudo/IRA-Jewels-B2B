@@ -12,7 +12,7 @@ const categories = [
 export default function CategoryPreview() {
   return (
     <section className="py-[100px] max-md:py-[78px] bg-ira-ivory" id="categories-preview">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto">
+      <div className="w-[calc(100%-56px)] mx-auto">
         <Reveal>
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>

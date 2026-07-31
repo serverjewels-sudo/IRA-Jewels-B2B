@@ -39,7 +39,7 @@ export default function Contact() {
     <section className="py-[120px] max-md:py-[78px] bg-ira-teal text-white relative overflow-hidden" id="contact">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_15%,rgba(178,158,103,0.18),transparent_32%)] pointer-events-none"></div>
       
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.2fr] gap-[55px] lg:gap-[90px]">
+      <div className="w-[calc(100%-56px)] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.2fr] gap-[55px] lg:gap-[90px]">
         <div className="lg:sticky lg:top-[110px] self-start">
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Start a Partnership</p>

@@ -24,7 +24,7 @@ export default function Quality() {
 
   return (
     <section className="py-[120px] max-md:py-[78px]" id="quality">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[35px] lg:gap-[90px] items-center">
+      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[35px] lg:gap-[90px] items-center">
         <div className="order-2 lg:order-1">
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Quality at Every Stage</p>

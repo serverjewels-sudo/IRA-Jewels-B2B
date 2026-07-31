@@ -46,7 +46,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       
       <main className="flex-grow pt-[140px] pb-[120px] max-md:pt-[120px] max-md:pb-[78px]">
         {/* Breadcrumb */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-10">
+        <section className="w-[calc(100%-56px)] mx-auto mb-10">
           <Reveal>
             <p className="text-[13px] text-ira-muted tracking-[0.08em] uppercase">
               <Link href="/" className="hover:text-ira-teal transition-colors">Home</Link>
@@ -61,7 +61,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
         </section>
 
         {/* Product Details */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-32">
+        <section className="w-[calc(100%-56px)] mx-auto mb-32">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
             
             {/* Left Column: Image */}
@@ -154,7 +154,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
 
         {/* You May Also Like */}
         {relatedProducts.length > 0 && (
-          <section className="w-[min(1320px,calc(100%-56px))] mx-auto">
+          <section className="w-[calc(100%-56px)] mx-auto">
             <Reveal>
               <h2 className="font-serif text-[32px] text-ira-teal mb-8 text-center">
                 You May Also Like

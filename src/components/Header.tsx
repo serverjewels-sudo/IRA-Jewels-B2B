@@ -50,7 +50,7 @@ export default function Header() {
       {/* Top Strip - Only visible on Home */}
       {isHome && (
         <div className="h-[30px] bg-ira-teal text-ira-pale-teal text-[10px] tracking-[0.08em] uppercase flex items-center">
-          <div className="w-[min(1320px,calc(100%-56px))] mx-auto flex justify-between items-center">
+          <div className="w-[calc(100%-56px)] mx-auto flex justify-between items-center">
             <span className="hidden lg:inline">Precision in Every Detail. Partnership at Every Step.</span>
             <div className="flex items-center gap-6 justify-end w-full lg:w-auto">
               <span>Jewellery Manufacturing • Surat, India</span>
@@ -77,7 +77,7 @@ export default function Header() {
             : "h-[88px] bg-transparent border-white/15 text-white"
         }`}
       >
-        <div className="w-[min(1320px,calc(100%-56px))] mx-auto h-full grid grid-cols-[1fr_auto] lg:grid-cols-[240px_1fr_auto] items-center gap-6">
+        <div className="w-[calc(100%-56px)] mx-auto h-full grid grid-cols-[1fr_auto] lg:grid-cols-[240px_1fr_auto] items-center gap-6">
           <Link href="/" className="flex items-center gap-3">
             <span className="font-serif text-3xl font-semibold tracking-wide whitespace-nowrap">IRA JEWELS</span>
             <span className={`text-[9px] tracking-[0.11em] uppercase leading-tight pl-3 border-l ${isSolid ? 'text-ira-muted border-ira-border' : 'text-white/70 border-white/25'}`}>

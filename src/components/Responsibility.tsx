@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Responsibility() {
   return (
     <section className="py-[120px] max-md:py-[78px] bg-[#e5e0d7]" id="responsibility">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-[55px] lg:gap-[90px] items-center">
+      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-[55px] lg:gap-[90px] items-center">
         <Reveal>
           <div className="h-[460px] lg:h-[680px] overflow-hidden bg-[#d8d3ca]">
             <img 

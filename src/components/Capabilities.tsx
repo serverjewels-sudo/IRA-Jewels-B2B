@@ -52,7 +52,7 @@ const capabilities = [
 export default function Capabilities() {
   return (
     <section className="py-[120px] max-md:py-[78px] bg-ira-teal text-white" id="capabilities">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-[38%_1fr] gap-[55px] lg:gap-[90px] items-start">
+      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-[38%_1fr] gap-[55px] lg:gap-[90px] items-start">
         <aside className="lg:sticky lg:top-[120px]">
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">End-to-End Jewellery Manufacturing</p>

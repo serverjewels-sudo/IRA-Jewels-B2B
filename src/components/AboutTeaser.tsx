@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutTeaser() {
   return (
     <section className="py-[120px] max-md:py-[78px] bg-white">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto">
+      <div className="w-[calc(100%-56px)] mx-auto">
         <Reveal>
           <div className="max-w-[900px] mx-auto text-center">
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-8">Who We Are</p>

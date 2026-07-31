@@ -15,7 +15,7 @@ const categories = [
 export default function Categories() {
   return (
     <section className="pt-10 pb-[120px] max-md:pb-[78px]" id="categories">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto">
+      <div className="w-[calc(100%-56px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2.3fr] gap-7 lg:gap-[70px] items-start mb-[70px]">
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Manufacturing Expertise</p>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Confidentiality() {
   return (
     <section className="py-[120px] max-md:py-[78px] bg-ira-teal text-white">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[55px] lg:gap-[90px] items-center">
+      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[55px] lg:gap-[90px] items-center">
         <Reveal>
           <div 
             className="h-[430px] lg:h-[600px] border border-[#34342f] relative overflow-hidden flex items-center justify-center"

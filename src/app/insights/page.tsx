@@ -33,7 +33,7 @@ export default function InsightsPage() {
       
       <main className="flex-grow pt-[140px] pb-[120px] max-md:pt-[120px] max-md:pb-[78px]">
         {/* Page Header */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto mb-16">
+        <section className="w-[calc(100%-56px)] mx-auto mb-16">
           <Reveal>
             <p className="text-[13px] text-ira-muted tracking-[0.08em] uppercase mb-4">
               <Link href="/" className="hover:text-ira-teal transition-colors">Home</Link>
@@ -47,7 +47,7 @@ export default function InsightsPage() {
         </section>
 
         {/* Card Grid */}
-        <section className="w-[min(1320px,calc(100%-56px))] mx-auto">
+        <section className="w-[calc(100%-56px)] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-[22px]">
             {insights.map((insight, i) => (
               <Reveal key={i} delay={i * 100}>

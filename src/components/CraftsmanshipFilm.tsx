@@ -4,7 +4,7 @@ import { getPlaceholderImage } from "@/lib/placeholders";
 export default function CraftsmanshipFilm() {
   return (
     <section className="py-[120px] max-md:py-[78px]">
-      <div className="w-[min(1320px,calc(100%-56px))] mx-auto flex max-md:flex-col justify-between md:items-end gap-6 mb-7">
+      <div className="w-[calc(100%-56px)] mx-auto flex max-md:flex-col justify-between md:items-end gap-6 mb-7">
         <div>
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Craftsmanship Film</p>
