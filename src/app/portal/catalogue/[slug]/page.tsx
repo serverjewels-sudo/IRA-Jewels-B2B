@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect, notFound } from 'next/navigation'
 import Link from 'next/link'
 import ProductGallery from '@/components/ProductGallery'
+import RequestQuoteButton from '@/components/RequestQuoteButton'
 
 export default async function CatalogueDetailPage({ params }: { params: { slug: string } }) {
   const supabase = createClient()
@@ -76,6 +77,14 @@ export default async function CatalogueDetailPage({ params }: { params: { slug: 
             <p className="text-[clamp(24px,3vw,32px)] text-ira-teal font-medium tracking-wide">
               {priceFormatted}
             </p>
+            
+            <div className="mt-6 w-[200px]">
+              <RequestQuoteButton 
+                productId={product.id}
+                productSku={product.sku}
+                productName={product.name || product.sku}
+              />
+            </div>
           </div>
           
           {/* Specifications Table */}
