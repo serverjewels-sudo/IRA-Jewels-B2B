@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import Link from 'next/link'
 
 export default async function AdminDashboard() {
   const supabase = createClient()
@@ -10,6 +11,30 @@ export default async function AdminDashboard() {
     .eq('status', 'Application Received')
 
   const pendingCount = error ? 0 : count || 0
+
+  // Fetch active products count
+  const { count: productsCountRes, error: productsError } = await supabase
+    .from('products')
+    .select('*', { count: 'exact', head: true })
+    .eq('is_active', true)
+
+  const productsCount = productsError ? 0 : productsCountRes || 0
+
+  // Fetch active buyers count
+  const { count: buyersCountRes, error: buyersError } = await supabase
+    .from('buyers')
+    .select('*', { count: 'exact', head: true })
+    .eq('is_active', true)
+
+  const buyersCount = buyersError ? 0 : buyersCountRes || 0
+
+  // Fetch pending quotes count
+  const { count: quotesCountRes, error: quotesError } = await supabase
+    .from('quote_requests')
+    .select('*', { count: 'exact', head: true })
+    .eq('status', 'Requested')
+
+  const quotesCount = quotesError ? 0 : quotesCountRes || 0
 
   return (
     <div className="p-10">
@@ -26,21 +51,32 @@ export default async function AdminDashboard() {
           </div>
         </div>
 
-        {/* Placeholders */}
-        <div className="bg-ira-ivory/50 border border-ira-border/50 border-dashed p-6 flex flex-col justify-center items-center text-center min-h-[120px]">
-          <h3 className="text-sm text-ira-teal font-medium mb-1">Products</h3>
-          <span className="text-xs text-ira-muted uppercase tracking-wider">Coming Soon</span>
-        </div>
+        {/* Products Stat Card */}
+        <Link href="/admin/products" className="bg-white border border-ira-border p-6 shadow-sm hover:shadow-md transition-shadow block">
+          <h3 className="text-[11px] uppercase tracking-[0.08em] text-ira-gold mb-1">Active Products</h3>
+          <div className="flex items-end gap-3 mt-3">
+            <span className="text-4xl font-serif text-ira-teal leading-none">{productsCount}</span>
+            <span className="text-sm text-ira-muted mb-1">in catalogue</span>
+          </div>
+        </Link>
 
-        <div className="bg-ira-ivory/50 border border-ira-border/50 border-dashed p-6 flex flex-col justify-center items-center text-center min-h-[120px]">
-          <h3 className="text-sm text-ira-teal font-medium mb-1">Buyers</h3>
-          <span className="text-xs text-ira-muted uppercase tracking-wider">Coming Soon</span>
-        </div>
+        {/* Buyers Stat Card */}
+        <Link href="/admin/buyers" className="bg-white border border-ira-border p-6 shadow-sm hover:shadow-md transition-shadow block">
+          <h3 className="text-[11px] uppercase tracking-[0.08em] text-ira-gold mb-1">Active Buyers</h3>
+          <div className="flex items-end gap-3 mt-3">
+            <span className="text-4xl font-serif text-ira-teal leading-none">{buyersCount}</span>
+            <span className="text-sm text-ira-muted mb-1">approved accounts</span>
+          </div>
+        </Link>
 
-        <div className="bg-ira-ivory/50 border border-ira-border/50 border-dashed p-6 flex flex-col justify-center items-center text-center min-h-[120px]">
-          <h3 className="text-sm text-ira-teal font-medium mb-1">Quotes</h3>
-          <span className="text-xs text-ira-muted uppercase tracking-wider">Coming Soon</span>
-        </div>
+        {/* Quotes Stat Card */}
+        <Link href="/admin/quotes" className="bg-white border border-ira-border p-6 shadow-sm hover:shadow-md transition-shadow block">
+          <h3 className="text-[11px] uppercase tracking-[0.08em] text-ira-gold mb-1">Pending Quotes</h3>
+          <div className="flex items-end gap-3 mt-3">
+            <span className="text-4xl font-serif text-ira-teal leading-none">{quotesCount}</span>
+            <span className="text-sm text-ira-muted mb-1">needs pricing</span>
+          </div>
+        </Link>
       </div>
     </div>
   )
