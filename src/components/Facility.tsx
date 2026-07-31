@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 export default function Facility() {
   return (
@@ -32,9 +33,9 @@ export default function Facility() {
 
         <div className="grid gap-[18px]">
           {[
-            { num: "01", title: "Design & Development Workspace", img: "https://images.unsplash.com/photo-1589674781759-c21c37956a44?q=80&w=1000&auto=format&fit=crop" },
-            { num: "02", title: "Controlled Production Departments", img: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1000&auto=format&fit=crop" },
-            { num: "03", title: "Skilled People & Quality Discipline", img: "https://images.unsplash.com/photo-1573408301145-b98c46544eb8?q=80&w=1000&auto=format&fit=crop" },
+            { num: "01", title: "Design & Development Workspace", img: getPlaceholderImage("mangalsutras", 1000) },
+            { num: "02", title: "Controlled Production Departments", img: getPlaceholderImage("bangles", 1000) },
+            { num: "03", title: "Skilled People & Quality Discipline", img: getPlaceholderImage("mens-jewellery", 1000) },
           ].map((card, i) => (
             <Reveal key={card.num} delay={i * 100}>
               <article className="h-[400px] lg:h-[460px] relative overflow-hidden bg-[#d8d3ca]">

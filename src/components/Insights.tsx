@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 const insights = [
   {
@@ -6,21 +7,21 @@ const insights = [
     read: "6 min read",
     title: "Building a Jewellery Collection That Is Ready for Production",
     excerpt: "Practical manufacturing insight for jewellery brands moving from concept to dependable production.",
-    img: "https://images.unsplash.com/photo-1589674781759-c21c37956a44?q=80&w=800&auto=format&fit=crop"
+    img: getPlaceholderImage("mangalsutras", 800)
   },
   {
     cat: "Sampling",
     read: "5 min read",
     title: "What Brands Should Know Before Approving a Jewellery Sample",
     excerpt: "Practical manufacturing insight for jewellery brands moving from concept to dependable production.",
-    img: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=800&auto=format&fit=crop"
+    img: getPlaceholderImage("bangles", 800)
   },
   {
     cat: "Quality",
     read: "7 min read",
     title: "Design Consistency Across Small and Large Production Runs",
     excerpt: "Practical manufacturing insight for jewellery brands moving from concept to dependable production.",
-    img: "https://images.unsplash.com/photo-1603561596112-0a132b757442?q=80&w=800&auto=format&fit=crop"
+    img: getPlaceholderImage("general_alt", 800)
   }
 ];
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 export default function Hero() {
   return (
@@ -8,7 +9,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#080807]/80 via-[#080807]/40 to-[#080807]/10 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#080807]/65 via-transparent to-transparent z-10"></div>
         <img
-          src="https://images.unsplash.com/photo-1589674781759-c21c37956a44?q=80&w=2070&auto=format&fit=crop"
+          src={getPlaceholderImage("mangalsutras", 2070)}
           alt="Jewellery artisan crafting a precision piece at a workbench"
           className="w-full h-full object-cover animate-[heroScale_2s_ease_forwards] scale-[1.05]"
         />

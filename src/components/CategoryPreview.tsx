@@ -1,11 +1,12 @@
 import Reveal from "./Reveal";
 import Link from "next/link";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 const categories = [
-  { name: "Rings", slug: "rings", img: "https://images.unsplash.com/photo-1605100804763-247f66156e55?q=80&w=800&auto=format&fit=crop" },
-  { name: "Earrings", slug: "earrings", img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop" },
-  { name: "Necklaces", slug: "necklaces", img: "https://images.unsplash.com/photo-1599643478514-4a884f1807bd?q=80&w=800&auto=format&fit=crop" },
-  { name: "Bracelets", slug: "bracelets", img: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800&auto=format&fit=crop" }
+  { name: "Rings", slug: "rings", img: getPlaceholderImage("rings", 800) },
+  { name: "Earrings", slug: "earrings", img: getPlaceholderImage("earrings", 800) },
+  { name: "Necklaces", slug: "necklaces", img: getPlaceholderImage("necklaces", 800) },
+  { name: "Bracelets", slug: "bracelets", img: getPlaceholderImage("bracelets", 800) }
 ];
 
 export default function CategoryPreview() {

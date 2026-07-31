@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getPlaceholderImage } from '@/lib/placeholders'
 
 export default async function CataloguePage() {
   const supabase = createClient()
@@ -65,9 +66,13 @@ export default async function CataloguePage() {
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-ira-muted/50 text-[10px] tracking-widest uppercase">No Image</span>
-                  </div>
+                  <Image 
+                    src={getPlaceholderImage(product.category)}
+                    alt={`${product.category} placeholder`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
                 )}
               </div>
               

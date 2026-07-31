@@ -2,43 +2,44 @@
 
 import { useState } from "react";
 import Reveal from "./Reveal";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 const steps = [
   {
     num: "01",
     title: "Discover",
     desc: "Understand the brand, customer, design direction and manufacturing requirements",
-    image: "https://images.unsplash.com/photo-1573408301145-b98c46544eb8?q=80&w=1200&auto=format&fit=crop",
+    image: getPlaceholderImage("mens-jewellery", 1200),
   },
   {
     num: "02",
     title: "Design",
     desc: "Develop concepts, technical drawings, CAD models and production specifications",
-    image: "https://images.unsplash.com/photo-1620288627223-53302f4e8c74?q=80&w=1200&auto=format&fit=crop",
+    image: getPlaceholderImage("general", 1200),
   },
   {
     num: "03",
     title: "Prototype",
     desc: "Create samples and refine proportions, finish, wearability and construction",
-    image: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1200&auto=format&fit=crop",
+    image: getPlaceholderImage("bangles", 1200),
   },
   {
     num: "04",
     title: "Manufacture",
     desc: "Execute approved designs through controlled production and skilled craftsmanship",
-    image: "https://images.unsplash.com/photo-1589674781759-c21c37956a44?q=80&w=1200&auto=format&fit=crop",
+    image: getPlaceholderImage("mangalsutras", 1200),
   },
   {
     num: "05",
     title: "Assure",
     desc: "Inspect dimensions, setting, finish, polish and overall production quality",
-    image: "https://images.unsplash.com/photo-1603561596112-0a132b757442?q=80&w=1200&auto=format&fit=crop",
+    image: getPlaceholderImage("general_alt", 1200),
   },
   {
     num: "06",
     title: "Deliver",
     desc: "Complete final approval, secure packaging and coordinated delivery",
-    image: "https://images.unsplash.com/photo-1599643478524-fb5244098795?q=80&w=1200&auto=format&fit=crop",
+    image: getPlaceholderImage("pendants", 1200),
   },
 ];
 

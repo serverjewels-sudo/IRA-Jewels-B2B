@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { getPlaceholderImage } from "@/lib/placeholders";
 import Link from "next/link";
 
 export default function Responsibility() {
@@ -8,7 +9,7 @@ export default function Responsibility() {
         <Reveal>
           <div className="h-[460px] lg:h-[680px] overflow-hidden bg-[#d8d3ca]">
             <img 
-              src="https://images.unsplash.com/photo-1573408301145-b98c46544eb8?q=80&w=1200&auto=format&fit=crop" 
+              src={getPlaceholderImage("mens-jewellery", 1200)} 
               alt="Organised jewellery tools and responsible material handling" 
               loading="lazy"
               className="w-full h-full object-cover"

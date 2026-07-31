@@ -2,16 +2,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 const categories = [
-  { name: "Rings", slug: "rings", image: "https://images.unsplash.com/photo-1605100804763-247f673f5426?q=80&w=600&auto=format&fit=crop" },
-  { name: "Earrings", slug: "earrings", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop" },
-  { name: "Pendants", slug: "pendants", image: "https://images.unsplash.com/photo-1599643478524-fb5244098795?q=80&w=600&auto=format&fit=crop" },
-  { name: "Necklaces", slug: "necklaces", image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600&auto=format&fit=crop" },
-  { name: "Bracelets", slug: "bracelets", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop" },
-  { name: "Bangles", slug: "bangles", image: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=600&auto=format&fit=crop" },
-  { name: "Mangalsutras", slug: "mangalsutras", image: "https://images.unsplash.com/photo-1589674781759-c21c37956a44?q=80&w=600&auto=format&fit=crop" },
-  { name: "Men's Jewellery", slug: "mens-jewellery", image: "https://images.unsplash.com/photo-1573408301145-b98c46544eb8?q=80&w=600&auto=format&fit=crop" },
+  { name: "Rings", slug: "rings", image: getPlaceholderImage("rings", 600) },
+  { name: "Earrings", slug: "earrings", image: getPlaceholderImage("earrings", 600) },
+  { name: "Pendants", slug: "pendants", image: getPlaceholderImage("pendants", 600) },
+  { name: "Necklaces", slug: "necklaces", image: getPlaceholderImage("necklaces", 600) },
+  { name: "Bracelets", slug: "bracelets", image: getPlaceholderImage("bracelets", 600) },
+  { name: "Bangles", slug: "bangles", image: getPlaceholderImage("bangles", 600) },
+  { name: "Mangalsutras", slug: "mangalsutras", image: getPlaceholderImage("mangalsutras", 600) },
+  { name: "Men's Jewellery", slug: "mens-jewellery", image: getPlaceholderImage("mens-jewellery", 600) },
 ];
 
 export default function ProductsPage() {

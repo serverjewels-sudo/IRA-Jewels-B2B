@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 export default function CraftsmanshipFilm() {
   return (
@@ -27,7 +28,7 @@ export default function CraftsmanshipFilm() {
             until a real video file exists. Rendering a static poster instead.
           */}
           <img 
-            src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=2070&auto=format&fit=crop" 
+            src={getPlaceholderImage("necklaces", 2070)} 
             alt="Craftsmanship preview" 
             className="w-full h-full object-cover"
           />

@@ -2,6 +2,7 @@
 
 import { useRef, MouseEvent } from "react";
 import Reveal from "./Reveal";
+import { getPlaceholderImage } from "@/lib/placeholders";
 
 export default function Quality() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -58,7 +59,7 @@ export default function Quality() {
           >
             <img 
               ref={imgRef}
-              src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1200&auto=format&fit=crop" 
+              src={getPlaceholderImage("bangles", 1200)} 
               alt="Macro jewellery polishing and finish inspection" 
               className="w-full h-full object-cover transition-transform duration-250 scale-[1.02] origin-center"
             />
