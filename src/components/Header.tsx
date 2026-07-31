@@ -39,12 +39,14 @@ export default function Header() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919023454014";
   
   // A helper for determining the visual state of the header
-  const isSolid = !isHome || isScrolled;
+  const isSolid = !isHome || isScrolled || isMenuOpen;
+  console.log('isMenuOpen:', isMenuOpen, 'isScrolled:', isScrolled);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out antialiased will-change-transform ${
-      isHome && isScrolled ? "-translate-y-[30px]" : "translate-y-0"
-    }`}>
+    <>
+      <div className={`fixed top-0 left-0 right-0 z-[110] transition-transform duration-300 ease-in-out antialiased will-change-transform ${
+        isHome && (isScrolled || isMenuOpen) ? "-translate-y-[30px]" : "translate-y-0"
+      }`}>
       {/* Top Strip - Only visible on Home */}
       {isHome && (
         <div className="h-[30px] bg-ira-teal text-ira-pale-teal text-[10px] tracking-[0.08em] uppercase flex items-center">
@@ -134,9 +136,10 @@ export default function Header() {
           </div>
         </div>
       </header>
+      </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-ira-ivory z-40 pt-[130px] px-7 pb-10 flex flex-col justify-between transition-transform duration-500 ease-in-out lg:hidden ${
+      <div className={`fixed inset-0 bg-ira-ivory z-[100] pt-[130px] px-7 pb-10 flex flex-col justify-between transition-transform duration-500 ease-in-out lg:hidden ${
         isMenuOpen ? "translate-y-0" : "-translate-y-full"
       }`}>
         <nav className="grid gap-4">
@@ -163,6 +166,6 @@ export default function Header() {
           <span>Backed by Divine Star</span>
         </div>
       </div>
-    </div>
+    </>
   );
 }
