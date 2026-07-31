@@ -1,5 +1,5 @@
 const CATEGORY_IDS: Record<string, string> = {
-  "rings": "1601121141461-9d6647bca1ed",
+  "rings": "https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Diamond_engagement_ring_on_velvet_202608010317.jpeg",
   "earrings": "1535632066927-ab7c9ab60908",
   "pendants": "1581403341630-a6e0b9d2d257",
   "necklaces": "1599643477877-530eb83abc8e",
@@ -17,6 +17,10 @@ export function getPlaceholderImage(category?: string | null, width: number = 80
   
   if (!id) {
     id = CATEGORY_IDS["general"];
+  }
+  
+  if (id.startsWith('http')) {
+    return id;
   }
   
   return `https://images.unsplash.com/photo-${id}?q=80&w=${width}&auto=format&fit=crop`;
