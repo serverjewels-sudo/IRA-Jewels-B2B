@@ -14,7 +14,7 @@ export default async function AdminDashboard() {
   return (
     <div className="p-10">
       <h1 className="font-serif text-4xl text-ira-teal mb-2">Welcome Back</h1>
-      <p className="text-ira-muted mb-10">Here's what's happening at IRA Jewels today.</p>
+      <p className="text-ira-muted mb-10">Here&apos;s what&apos;s happening at IRA Jewels today.</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Applications Stat Card */}
