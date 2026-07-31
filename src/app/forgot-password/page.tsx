@@ -49,7 +49,7 @@ export default function ForgotPasswordPage() {
             Account Recovery
           </h1>
           <p className="text-ira-ivory/80 text-lg leading-relaxed">
-            Regain access to your secure buyer portal and private collections
+            Regain access to your secure account
           </p>
         </div>
       </div>

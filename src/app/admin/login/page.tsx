@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
+import Link from 'next/link'
 
 export default function AdminLogin() {
   const [email, setEmail] = useState('')
@@ -77,9 +78,14 @@ export default function AdminLogin() {
           </div>
           
           <div>
-            <label className="block text-[11px] uppercase tracking-[0.08em] text-ira-teal mb-2">
-              Password
-            </label>
+            <div className="flex justify-between items-center mb-2">
+              <label className="block text-[11px] uppercase tracking-[0.08em] text-ira-teal">
+                Password
+              </label>
+              <Link href="/forgot-password" className="text-[11px] uppercase tracking-[0.08em] text-ira-teal hover:text-ira-gold transition-colors">
+                Forgot password?
+              </Link>
+            </div>
             <input
               type="password"
               value={password}
