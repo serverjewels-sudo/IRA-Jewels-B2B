@@ -99,6 +99,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Link href="/login" className={`hidden lg:flex items-center justify-center gap-2 h-10 px-4 border text-[11px] uppercase tracking-[0.08em] transition-all duration-300 hover:-translate-y-0.5 ${
+              isSolid 
+                ? "border-ira-teal/30 text-ira-teal hover:border-ira-teal bg-transparent" 
+                : "border-white/30 text-white hover:border-white bg-transparent"
+            }`}>
+              Buyer Login
+            </Link>
             <Link href="/apply" className={`hidden lg:flex items-center justify-center gap-2 h-10 px-4 border text-[11px] uppercase tracking-[0.08em] transition-all duration-300 hover:-translate-y-0.5 ${
               isSolid 
                 ? "border-ira-teal bg-transparent hover:bg-ira-teal hover:text-white" 
@@ -146,6 +153,9 @@ export default function Header() {
           ))}
           <Link href="/apply" onClick={() => setIsMenuOpen(false)} className="font-serif text-4xl leading-none text-ira-gold mt-4">
             Apply for Trade Account
+          </Link>
+          <Link href="/login" onClick={() => setIsMenuOpen(false)} className="font-serif text-2xl leading-none text-ira-teal/70 mt-2">
+            Buyer Login
           </Link>
         </nav>
         <div className="border-t border-ira-border pt-4 flex justify-between text-ira-muted text-[11px] uppercase tracking-[0.1em]">
