@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PortalLogoutButton from '@/components/PortalLogoutButton'
 import AutoLogout from '@/components/AutoLogout'
+import PortalSidebar from './PortalSidebar'
 
 export default async function PortalLayout({ children }: { children: React.ReactNode }) {
   const supabase = createClient()
@@ -64,20 +65,7 @@ export default async function PortalLayout({ children }: { children: React.React
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <aside className="w-64 bg-white border-r border-ira-border hidden lg:block overflow-y-auto">
-          <nav className="p-6 space-y-2">
-            <Link href="/portal" className="flex items-center gap-3 px-4 py-3 bg-ira-ivory/50 text-ira-teal text-sm font-medium border border-ira-border">
-              Dashboard
-            </Link>
-            <Link href="/portal/catalogue" className="flex items-center gap-3 px-4 py-3 text-ira-muted hover:bg-ira-ivory/50 hover:text-ira-teal transition-colors text-sm">
-              Catalogue
-            </Link>
-            <Link href="/portal/quotes" className="flex items-center gap-3 px-4 py-3 text-ira-muted hover:bg-ira-ivory/50 hover:text-ira-teal transition-colors text-sm">
-              Quotes
-            </Link>
-            <Link href="/portal/account" className="flex items-center gap-3 px-4 py-3 text-ira-muted hover:bg-ira-ivory/50 hover:text-ira-teal transition-colors text-sm">
-              Account Settings
-            </Link>
-          </nav>
+          <PortalSidebar />
         </aside>
 
         {/* Main Content Area */}
