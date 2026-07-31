@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { name: 'Applications', href: '/admin/applications' },
   { name: 'Buyers', href: '/admin/buyers' },
   { name: 'Quotes', href: '/admin/quotes' },
+  { name: 'Contact Inquiries', href: '/admin/contact-inquiries' },
 ]
 
 export default function AdminSidebar() {
