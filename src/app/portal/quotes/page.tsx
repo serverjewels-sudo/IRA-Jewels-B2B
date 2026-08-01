@@ -94,7 +94,7 @@ export default async function QuotesPage() {
   }
 
   return (
-    <div className="p-8 lg:p-12 max-w-7xl mx-auto">
+    <div className="p-8 lg:p-12">
       <div className="mb-10">
         <h1 className="font-serif text-4xl text-ira-teal mb-3">My Quote Requests</h1>
         <p className="text-ira-muted text-lg">View the status of your bespoke and bulk order inquiries.</p>

@@ -22,7 +22,7 @@ export default async function BuyerDashboard() {
   }
 
   return (
-    <div className="p-8 lg:p-12 max-w-6xl mx-auto">
+    <div className="p-8 lg:p-12">
       <div className="mb-12">
         <h1 className="font-serif text-4xl lg:text-5xl text-ira-teal mb-3">Welcome, {buyer.company_name}</h1>
         <p className="text-ira-muted text-sm flex items-center gap-2">

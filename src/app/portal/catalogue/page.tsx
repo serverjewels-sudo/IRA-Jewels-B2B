@@ -35,7 +35,7 @@ export default async function CataloguePage() {
   }
 
   return (
-    <div className="p-8 lg:p-12 max-w-[1600px] mx-auto">
+    <div className="p-8 lg:p-12">
       <div className="mb-12 border-b border-ira-border/50 pb-8">
         <h1 className="font-serif text-4xl lg:text-5xl text-ira-teal mb-4">Full Catalogue</h1>
         <p className="text-ira-muted text-sm max-w-2xl leading-relaxed">
@@ -53,7 +53,7 @@ export default async function CataloguePage() {
           <p className="text-ira-muted text-sm">We are currently updating our catalogue. Please check back later.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {products.map((product) => (
             <div key={product.id} className="group flex flex-col bg-white border border-ira-border hover:border-ira-teal transition-colors">
               <div className="relative aspect-square w-full bg-ira-ivory/50 overflow-hidden border-b border-ira-border">

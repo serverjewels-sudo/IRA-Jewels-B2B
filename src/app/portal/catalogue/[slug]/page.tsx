@@ -40,7 +40,7 @@ export default async function CatalogueDetailPage({ params }: { params: { slug: 
   const priceFormatted = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(product.price);
 
   return (
-    <div className="p-8 lg:p-12 max-w-[1320px] mx-auto min-h-[calc(100vh-200px)]">
+    <div className="p-8 lg:p-12 min-h-[calc(100vh-200px)]">
       
       {/* Breadcrumb */}
       <div className="mb-10 text-[13px] text-ira-muted tracking-[0.08em] uppercase">

@@ -23,7 +23,7 @@ export default async function AdminProductsPage() {
   const hasProducts = products && products.length > 0;
 
   return (
-    <div className="p-10 max-w-[1400px] mx-auto">
+    <div className="p-10">
       <div className="flex justify-between items-center mb-8">
         <h1 className="font-serif text-4xl text-ira-teal">Products</h1>
         <Link 

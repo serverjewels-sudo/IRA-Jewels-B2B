@@ -47,7 +47,7 @@ export default async function AccountPage() {
   })
 
   return (
-    <div className="p-8 md:p-12 lg:p-16 max-w-5xl mx-auto">
+    <div className="p-4 md:p-8 lg:p-12">
       <div className="mb-10">
         <h1 className="font-serif text-4xl text-ira-teal mb-3">Account Details</h1>
         <p className="text-ira-muted text-lg">Manage your secure B2B profile and preferences</p>
