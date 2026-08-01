@@ -16,7 +16,7 @@ const CATEGORIES = [
   { label: "Men's Jewellery", value: 'mens-jewellery' }
 ]
 
-const GOLD_PURITIES = ['14K', '18K', '22K']
+const GOLD_PURITIES = ['9K', '10K', '14K', '18K', '22K']
 const DIAMOND_TYPES = ['Natural', 'Lab-Grown']
 
 type ProductFormProps = {
@@ -299,6 +299,7 @@ export default function ProductForm({ mode = 'add', initialData }: ProductFormPr
                 min="0"
                 value={minWeight}
                 onChange={(e) => setMinWeight(e.target.value)}
+                onWheel={(e) => e.currentTarget.blur()}
                 className={inputClass}
                 placeholder="e.g. 15.5"
               />
@@ -311,6 +312,7 @@ export default function ProductForm({ mode = 'add', initialData }: ProductFormPr
                 min="0"
                 value={maxWeight}
                 onChange={(e) => setMaxWeight(e.target.value)}
+                onWheel={(e) => e.currentTarget.blur()}
                 className={inputClass}
                 placeholder="e.g. 18.2"
               />
@@ -339,6 +341,7 @@ export default function ProductForm({ mode = 'add', initialData }: ProductFormPr
               min="0"
               value={diamondWeight}
               onChange={(e) => setDiamondWeight(e.target.value)}
+              onWheel={(e) => e.currentTarget.blur()}
               className={inputClass}
               placeholder="e.g. 1.25"
             />
@@ -368,6 +371,7 @@ export default function ProductForm({ mode = 'add', initialData }: ProductFormPr
               min="0"
               value={tier1Price}
               onChange={(e) => setTier1Price(e.target.value)}
+              onWheel={(e) => e.currentTarget.blur()}
               required
               className={inputClass}
               placeholder="0.00"
@@ -380,6 +384,7 @@ export default function ProductForm({ mode = 'add', initialData }: ProductFormPr
               min="0"
               value={tier2Price}
               onChange={(e) => setTier2Price(e.target.value)}
+              onWheel={(e) => e.currentTarget.blur()}
               required
               className={inputClass}
               placeholder="0.00"
@@ -392,6 +397,7 @@ export default function ProductForm({ mode = 'add', initialData }: ProductFormPr
               min="0"
               value={tier3Price}
               onChange={(e) => setTier3Price(e.target.value)}
+              onWheel={(e) => e.currentTarget.blur()}
               required
               className={inputClass}
               placeholder="0.00"
