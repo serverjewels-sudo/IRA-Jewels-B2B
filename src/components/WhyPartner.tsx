@@ -32,7 +32,7 @@ export default function WhyPartner() {
   return (
     <section className="py-[120px] max-md:py-[78px]">
       <div className="w-[calc(100%-56px)] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2.3fr] gap-7 lg:gap-[70px] items-start mb-[70px]">
+        <div className="grid grid-cols-1 gap-7 items-start mb-[70px]">
           <Reveal>
             <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Why Partner With Ira</p>
           </Reveal>

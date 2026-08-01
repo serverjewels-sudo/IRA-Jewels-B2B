@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <section className="py-[120px] max-md:py-[78px]" id="about">
-      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-7 lg:gap-[70px]">
+      <div className="w-[calc(100%-56px)] mx-auto grid grid-cols-1 gap-7">
         <Reveal>
           <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">Who We Are</p>
         </Reveal>
