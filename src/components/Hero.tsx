@@ -17,17 +17,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 w-[calc(100%-56px)] mx-auto pb-[72px] max-md:pb-[54px]">
-        <p className="text-[#d4b98c] text-[11px] tracking-[0.18em] uppercase font-bold mb-6">
+        <p className="text-[#d4b98c] text-[11px] max-md:text-[10px] tracking-[0.18em] uppercase font-bold mb-6 max-md:mb-4">
           B2B Jewellery Manufacturing Partner
         </p>
         
-        <h1 className="font-serif text-[clamp(48px,7.4vw,110px)] max-md:text-[clamp(48px,14.3vw,68px)] leading-[0.96] tracking-[-0.045em] max-w-[930px]">
+        <h1 className="font-serif text-[clamp(48px,7.4vw,110px)] max-md:text-[clamp(36px,10vw,52px)] leading-[0.96] tracking-[-0.045em] max-w-[930px]">
           <span className="block">We Craft</span>
           <span className="block">Jewellery Brands</span>
           <span className="block font-serif-italic text-ira-gold">With Precision.</span>
         </h1>
         
-        <p className="max-w-[600px] my-[30px] text-[#e1ddd5] text-[17px] max-md:text-[15px] leading-relaxed">
+        <p className="max-w-[600px] my-[30px] max-md:my-5 text-[#e1ddd5] text-[17px] max-md:text-[14px] leading-relaxed">
           From first sketch to final shipment, Ira Jewels delivers design development, precision manufacturing and dependable production support for jewellery brands.
         </p>
         
