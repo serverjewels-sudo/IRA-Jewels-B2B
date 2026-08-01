@@ -37,7 +37,7 @@ export default async function AdminDashboard() {
   const quotesCount = quotesError ? 0 : quotesCountRes || 0
 
   return (
-    <div className="p-10">
+    <div className="p-4 md:p-8 lg:p-10">
       <h1 className="font-serif text-4xl text-ira-teal mb-2">Welcome Back</h1>
       <p className="text-ira-muted mb-10">Here&apos;s what&apos;s happening at IRA Jewels today.</p>
 

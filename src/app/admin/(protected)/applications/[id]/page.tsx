@@ -51,7 +51,7 @@ export default async function ApplicationReviewPage({ params }: { params: { id: 
   }
 
   return (
-    <div className="p-10 max-w-5xl mx-auto">
+    <div className="p-4 md:p-8 lg:p-10 max-w-5xl mx-auto">
       <div className="mb-8 flex items-center justify-between">
         <Link 
           href="/admin/applications"
@@ -68,7 +68,7 @@ export default async function ApplicationReviewPage({ params }: { params: { id: 
         </span>
       </div>
 
-      <div className="bg-white border border-ira-border shadow-sm p-8 sm:p-12 mb-10">
+      <div className="bg-white border border-ira-border shadow-sm p-4 sm:p-8 md:p-12 mb-10">
         <div className="border-b border-ira-border/50 pb-8 mb-8">
           <h1 className="font-serif text-4xl text-ira-teal mb-2">{application.legal_business_name}</h1>
           <p className="text-ira-muted text-sm">Submitted on {formattedDate}</p>

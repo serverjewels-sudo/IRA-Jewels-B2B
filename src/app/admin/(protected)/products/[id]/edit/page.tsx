@@ -17,7 +17,7 @@ export default async function EditProductPage({ params }: { params: { id: string
   }
 
   return (
-    <div className="p-10 max-w-[1400px] mx-auto">
+    <div className="p-4 md:p-8 lg:p-10">
       <div className="mb-8">
         <Link 
           href="/admin/products" 

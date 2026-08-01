@@ -25,7 +25,7 @@ export default function AdminSidebar() {
   }
 
   return (
-    <aside className="w-64 bg-ira-teal text-white flex flex-col h-screen sticky top-0 border-r border-ira-teal/20">
+    <aside className="w-64 bg-ira-teal text-white hidden lg:flex flex-col h-screen sticky top-0 border-r border-ira-teal/20">
       <div className="p-6 border-b border-white/10">
         <h2 className="font-serif text-2xl tracking-wide text-ira-gold">IRA Jewels</h2>
         <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-1">Admin Panel</p>

@@ -27,7 +27,7 @@ export default async function BuyersPage() {
   const buyersList = buyers || []
 
   return (
-    <div className="p-10">
+    <div className="p-4 md:p-8 lg:p-10">
       <div className="flex justify-between items-end mb-10">
         <div>
           <h1 className="font-serif text-4xl text-ira-teal mb-2">Buyers</h1>
