@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -78,7 +79,13 @@ export default function Header() {
       >
         <div className="w-[calc(100%-56px)] mx-auto h-full grid grid-cols-[1fr_auto] lg:grid-cols-[240px_1fr_auto] items-center gap-6">
           <Link href="/" className="flex items-center gap-3">
-            <span className="font-serif text-3xl font-semibold tracking-wide whitespace-nowrap">IRA JEWELS</span>
+            <Image
+              src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Final%20Logo.png"
+              alt="IRA Jewels"
+              width={isSolid ? 135 : 180}
+              height={isSolid ? 24 : 32}
+              className="object-contain transition-all duration-300"
+            />
             <span className={`text-[9px] tracking-[0.11em] uppercase leading-tight pl-3 border-l ${isSolid ? 'text-ira-muted border-ira-border' : 'text-white/70 border-white/25'}`}>
               backed by<br />Divine Star
             </span>
