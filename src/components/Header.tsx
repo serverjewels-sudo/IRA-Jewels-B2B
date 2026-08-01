@@ -80,7 +80,10 @@ export default function Header() {
         <div className="w-[calc(100%-56px)] mx-auto h-full grid grid-cols-[1fr_auto] lg:grid-cols-[240px_1fr_auto] items-center gap-6">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Final%20Logo.png"
+              src={isSolid 
+                ? "https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Final%20Logo.png" 
+                : "https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Final%20White%20Log.png"
+              }
               alt="IRA Jewels"
               width={isSolid ? 135 : 180}
               height={isSolid ? 24 : 32}
