@@ -11,10 +11,10 @@ const categories = [
 
 export default function CategoryPreview() {
   return (
-    <section className="py-[100px] max-md:py-[78px] bg-ira-ivory" id="categories-preview">
+    <section className="py-[80px] max-md:py-[78px] bg-ira-ivory" id="categories-preview">
       <div className="w-[calc(100%-56px)] mx-auto">
         <Reveal>
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="flex flex-col items-center text-center md:flex-row md:items-end md:text-left justify-between mb-8 gap-6">
             <div>
               <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-4">Our Catalogue</p>
               <h2 className="font-serif text-[clamp(40px,5vw,56px)] leading-[1] text-ira-teal m-0">

@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function AboutTeaser() {
   return (
-    <section className="py-[120px] max-md:py-[78px] bg-white">
+    <section className="py-[80px] max-md:py-[78px] bg-white">
       <div className="w-[calc(100%-56px)] mx-auto">
         <Reveal>
-          <div className="max-w-[900px] mx-auto text-center">
-            <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-8">Who We Are</p>
+          <div className="max-w-[900px] md:max-w-none mx-auto md:mx-0 text-center md:text-left">
+            <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-4">Who We Are</p>
             
-            <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.2] text-ira-teal mb-8">
+            <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.2] text-ira-teal mb-6">
               Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023 and backed by Divine Star, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
             </h2>
             
