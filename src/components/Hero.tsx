@@ -8,11 +8,16 @@ export default function Hero() {
         <img
           src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Final%20Hero.jpeg"
           alt="Jewellery artisan crafting a precision piece at a workbench"
-          className="w-full h-full object-cover object-[80%_10%] max-md:object-[50%_25%] animate-[heroScale_2s_ease_forwards] scale-[1.05] max-md:scale-100"
+          className="hidden md:block w-full h-full object-cover object-[80%_10%] max-md:object-[50%_25%] animate-[heroScale_2s_ease_forwards] scale-[1.05] max-md:scale-100"
+        />
+        <img
+          src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Try%202.png"
+          alt="Jewellery artisan crafting a precision piece at a workbench"
+          className="block md:hidden absolute inset-0 w-full h-full object-cover object-top"
         />
       </div>
       {/* Content */}
-      <div className="relative z-10 w-[calc(100%-56px)] mx-auto pb-[72px] max-md:pb-[54px]">
+      <div className="relative z-10 w-[calc(100%-56px)] mx-auto pb-[72px] max-md:pb-6">
         <p className="text-[#d4b98c] text-[11px] max-md:text-[10px] tracking-[0.18em] uppercase font-bold mb-6 max-md:mb-4">
           B2B Jewellery Manufacturing Partner
         </p>
