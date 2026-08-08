@@ -13,7 +13,7 @@ export default function Hero() {
         <img
           src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Try%202.png"
           alt="Jewellery artisan crafting a precision piece at a workbench"
-          className="block md:hidden absolute inset-0 w-full h-full object-cover object-top"
+          className="block md:hidden absolute inset-0 w-full h-full object-cover object-top max-[390px]:object-[center_-60px]"
         />
       </div>
       {/* Content */}

@@ -49,7 +49,7 @@ export default function Header() {
       }`}>
       {/* Top Strip - Only visible on Home */}
       {isHome && (
-        <div className="h-[30px] bg-ira-teal text-ira-pale-teal text-[10px] tracking-[0.08em] uppercase flex items-center">
+        <div className="h-[30px] bg-ira-teal text-ira-pale-teal text-[10px] max-[390px]:text-[8px] tracking-[0.08em] uppercase flex items-center">
           <div className="w-[calc(100%-56px)] mx-auto flex justify-between items-center">
             <span className="hidden lg:inline">Precision in Every Detail. Partnership at Every Step.</span>
             <div className="flex items-center gap-6 justify-end w-full lg:w-auto">
