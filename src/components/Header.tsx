@@ -40,7 +40,7 @@ export default function Header() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919023454014";
   
   // A helper for determining the visual state of the header
-  const isSolid = !isHome || isScrolled || isMenuOpen;
+  const isSolid = true;
 
   return (
     <>
