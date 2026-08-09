@@ -28,7 +28,7 @@ export default function Hero() {
           <span className="block font-serif-italic text-ira-gold">With Precision.</span>
         </h1>
         
-        <p className="max-w-[600px] my-[30px] max-md:my-5 text-ira-text text-[15px] max-md:text-[14px] leading-relaxed">
+        <p className="max-w-[600px] my-[30px] max-md:my-5 text-ira-text text-[15px] max-md:text-[14px] max-[390px]:text-[12px] leading-relaxed">
           From first sketch to final shipment, Ira Jewels delivers design development, precision manufacturing and dependable production support for jewellery brands.
         </p>
         
