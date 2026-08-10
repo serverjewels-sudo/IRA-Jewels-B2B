@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Suspense } from 'react'
+import { useState, Suspense, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
@@ -9,32 +9,33 @@ import Image from 'next/image'
 function AuthConfirmContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const hasAttempted = useRef(false)
 
   const code = searchParams.get('code')
   const next = searchParams.get('next') ?? '/portal'
 
-  const handleConfirm = async () => {
-    if (!code) return
+  useEffect(() => {
+    if (!code || hasAttempted.current) return
+    hasAttempted.current = true
 
-    setIsLoading(true)
-    setError(null)
+    const confirmCode = async () => {
+      const supabase = createBrowserClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+      )
 
-    const supabase = createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
+      const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(code)
 
-    const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(code)
-
-    if (exchangeError) {
-      setError('This link has expired or was already used. Please request a new one.')
-      setIsLoading(false)
-    } else {
-      router.push(next)
+      if (exchangeError) {
+        setError('This link has expired or was already used. Please request a new one.')
+      } else {
+        router.push(next)
+      }
     }
-  }
+
+    confirmCode()
+  }, [code, next, router])
 
   if (!code) {
     return (
@@ -61,16 +62,9 @@ function AuthConfirmContent() {
           </Link>
         </div>
       ) : (
-        <>
-          <p className="text-ira-muted text-sm mb-8">Click below to continue and verify your email link securely.</p>
-          <button
-            onClick={handleConfirm}
-            disabled={isLoading}
-            className="w-full py-4 bg-ira-teal text-white text-[11px] uppercase tracking-[0.1em] hover:bg-ira-teal/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-          >
-            {isLoading ? 'Verifying...' : 'Continue'}
-          </button>
-        </>
+        <div className="py-8">
+          <p className="text-ira-teal text-sm animate-pulse font-medium">Verifying...</p>
+        </div>
       )}
     </div>
   )
