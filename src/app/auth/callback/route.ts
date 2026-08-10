@@ -1,4 +1,3 @@
-import { createClient } from '@/lib/supabase/server'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function GET(request: NextRequest) {
@@ -7,21 +6,11 @@ export async function GET(request: NextRequest) {
   const next = requestUrl.searchParams.get('next') ?? '/portal'
 
   if (code) {
-    const supabase = createClient()
-    const { error } = await supabase.auth.exchangeCodeForSession(code)
-    
-    console.log('CALLBACK DEBUG - code present:', !!code)
-    console.log('CALLBACK DEBUG - error:', JSON.stringify(error))
-
-    if (!error) {
-      return NextResponse.redirect(new URL(next, request.url))
-    }
-    
-    // If there is an error during code exchange, you might want to redirect to an error page
-    // For now we will just fall through and let the destination page handle unauthenticated state
-    console.error('Auth callback code exchange error:', error)
+    // Redirect to the new client-side confirmation page instead of exchanging here
+    // This prevents email security scanners from consuming the single-use code
+    return NextResponse.redirect(new URL(`/auth/confirm?code=${code}&next=${next}`, request.url))
   }
 
-  // Fallback if no code or exchange fails
+  // Fallback if no code
   return NextResponse.redirect(new URL('/login', request.url))
 }
