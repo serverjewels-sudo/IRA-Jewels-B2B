@@ -8,7 +8,10 @@ export async function GET(request: NextRequest) {
   if (code) {
     // Redirect to the new client-side confirmation page instead of exchanging here
     // This prevents email security scanners from consuming the single-use code
-    return NextResponse.redirect(new URL(`/auth/confirm?code=${code}&next=${next}`, request.url))
+    const redirectUrl = new URL('/auth/confirm', request.url)
+    redirectUrl.searchParams.set('code', code)
+    redirectUrl.searchParams.set('next', next)
+    return NextResponse.redirect(redirectUrl)
   }
 
   // Fallback if no code
