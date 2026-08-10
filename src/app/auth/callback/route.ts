@@ -10,6 +10,9 @@ export async function GET(request: NextRequest) {
     const supabase = createClient()
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     
+    console.log('CALLBACK DEBUG - code present:', !!code)
+    console.log('CALLBACK DEBUG - error:', JSON.stringify(error))
+
     if (!error) {
       return NextResponse.redirect(new URL(next, request.url))
     }
