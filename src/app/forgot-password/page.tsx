@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { createBrowserClient } from '@supabase/ssr'
+import { resetClient as supabase } from '@/lib/supabase/resetClient'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -15,14 +15,9 @@ export default function ForgotPasswordPage() {
     setIsLoading(true)
     setMessage('')
 
-    const supabase = createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
-
-    // Call reset password with redirect to the callback route
+    // Call reset password with direct redirect to the reset page (Implicit flow)
     await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/auth/callback?next=/reset-password`,
+      redirectTo: `${window.location.origin}/reset-password`,
     })
 
     // Always show the same success message regardless of whether the email exists

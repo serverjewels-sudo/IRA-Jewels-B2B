@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { createBrowserClient } from '@supabase/ssr'
+import { resetClient as supabase } from '@/lib/supabase/resetClient'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -17,22 +17,24 @@ export default function ResetPasswordPage() {
   const [success, setSuccess] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const supabase = createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  )
-
   useEffect(() => {
-    const checkSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (session) {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === "PASSWORD_RECOVERY") {
         setHasValidSession(true)
+        setIsChecking(false)
       }
+    })
+
+    // Timeout to stop checking if no recovery event fires
+    const timer = setTimeout(() => {
       setIsChecking(false)
+    }, 2000)
+
+    return () => {
+      clearTimeout(timer)
+      subscription.unsubscribe()
     }
-    
-    checkSession()
-  }, [supabase.auth])
+  }, [])
 
   const handleUpdatePassword = async (e: React.FormEvent) => {
     e.preventDefault()
