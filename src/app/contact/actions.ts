@@ -68,7 +68,7 @@ ${message}
       `
 
       const { error: emailError } = await resend.emails.send({
-        from: 'onboarding@resend.dev',
+        from: 'IRA Jewels <notifications@irajewels.in>',
         to: 'irajewels@iragroup.in',
         subject: `New Contact Inquiry — ${name} (${company})`,
         text: emailBody,

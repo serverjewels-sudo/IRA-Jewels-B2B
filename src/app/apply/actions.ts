@@ -97,7 +97,7 @@ Store Photo: ${data.documents.store_photo ? 'Yes' : 'No'}
         `
 
         const { error: emailError } = await resend.emails.send({
-          from: 'onboarding@resend.dev',
+          from: 'IRA Jewels <notifications@irajewels.in>',
           to: 'irajewels@iragroup.in',
           subject: `New Trade Account Application — ${data.legalBusinessName}`,
           text: emailBody,
