@@ -19,6 +19,13 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          if (window.location.hash.includes('type=recovery')) {
+            window.location.replace('/reset-password' + window.location.hash);
+          }
+        `
+      }} />
       <Header />
       <main>
         <Hero />
