@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="border-t border-[#262623] mt-[50px] pt-[20px] flex flex-col md:flex-row justify-between gap-2 text-[#6f6b65] text-[11px]">
           <span>© 2026 Ira Jewels. Established 2023.</span>
-          <span>Backed by Divine Star • Surat, India</span>
+          <span>Surat, India</span>
         </div>
       </div>
     </footer>

@@ -89,9 +89,6 @@ export default function Header() {
               height={isSolid ? 24 : 32}
               className="object-contain transition-all duration-300"
             />
-            <span className={`text-[9px] tracking-[0.11em] uppercase leading-tight pl-3 border-l ${isSolid ? 'text-ira-muted border-ira-border' : 'text-white/70 border-white/25'}`}>
-              backed by<br />Divine Star
-            </span>
           </Link>
 
           <nav className="hidden lg:flex justify-center gap-6 text-[11px] uppercase tracking-[0.08em]">
@@ -178,9 +175,8 @@ export default function Header() {
             Buyer Login
           </Link>
         </nav>
-        <div className="border-t border-ira-border pt-4 flex justify-between text-ira-muted text-[11px] uppercase tracking-[0.1em]">
+        <div className="border-t border-ira-border pt-4 flex justify-center text-ira-muted text-[11px] uppercase tracking-[0.1em]">
           <span>Surat, India</span>
-          <span>Backed by Divine Star</span>
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ export default function AboutTeaser() {
               <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-4">Who We Are</p>
               
               <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.2] text-ira-teal mb-6">
-                Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023 and backed by Divine Star, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
+                Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
               </h2>
               
               <Link 

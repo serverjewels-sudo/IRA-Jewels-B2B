@@ -12,15 +12,15 @@ export default function Facility() {
               Designed for Precision. Built for Dependable Production.
             </h2>
             <p className="text-ira-muted m-0">
-              The production website should use genuine Ira Jewels facility and team photography. Unconfirmed information remains clearly editable rather than being presented as fact.
+              Every stage of production is managed in-house, from initial design through final quality assurance, ensuring consistency across every order.
             </p>
             
             <div className="grid grid-cols-2 gap-3 mt-[36px]">
               {[
-                { label: "Production capacity", val: "TBD" },
-                { label: "Team size", val: "TBD" },
-                { label: "Facility area", val: "TBD" },
-                { label: "Markets served", val: "TBD" },
+                { label: "Production capacity", val: "30 KG/month" },
+                { label: "Team size", val: "70" },
+                { label: "Facility area", val: "8,000 sq. ft." },
+                { label: "Markets served", val: "Global" },
               ].map((stat, i) => (
                 <div key={i} className="border border-[#171715]/15 p-[18px]">
                   <strong className="block font-serif text-[28px] font-normal">{stat.val}</strong>

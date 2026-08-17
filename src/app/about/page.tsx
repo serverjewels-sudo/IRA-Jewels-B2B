@@ -25,11 +25,6 @@ const partners = [
     title: "Responsive Communication",
     desc: "Clear updates, approvals and coordination throughout the project.",
   },
-  {
-    num: "05",
-    title: "Backed by Divine Star",
-    desc: "Additional industry strength and credibility behind every partnership.",
-  },
 ];
 
 export default function AboutPage() {
@@ -71,7 +66,7 @@ export default function AboutPage() {
               <Reveal delay={200}>
                 <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-7 lg:gap-[60px] items-start">
                   <p className="text-[18px] text-ira-muted max-w-[700px] m-0">
-                    Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023 and backed by Divine Star, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
+                    Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
                   </p>
                 </div>
               </Reveal>

@@ -166,17 +166,19 @@ export default function ManufacturingPage() {
                   Designed for Precision. Built for Dependable Production.
                 </h2>
                 
-                {/* Omitted the leaked placeholder paragraph */}
+                <p className="text-ira-muted m-0">
+                  Every stage of production is managed in-house, from initial design through final quality assurance, ensuring consistency across every order.
+                </p>
                 
                 <div className="grid grid-cols-2 gap-3 mt-[36px]">
                   {[
-                    { label: "Production capacity", val: "TBD" },
-                    { label: "Team size", val: "TBD" },
-                    { label: "Facility area", val: "TBD" },
-                    { label: "Markets served", val: "TBD" },
+                    { label: "Production capacity", val: "30 KG/month" },
+                    { label: "Team size", val: "70" },
+                    { label: "Facility area", val: "8,000 sq. ft." },
+                    { label: "Markets served", val: "Global" },
                   ].map((stat, i) => (
                     <div key={i} className="border border-[#171715]/15 p-[18px]">
-                      <strong className="block font-serif text-[28px] font-normal text-ira-text">{stat.val}</strong>
+                      <strong className="block font-sans text-[28px] font-normal text-ira-text">{stat.val}</strong>
                       <span className="text-[10px] uppercase tracking-[0.1em] text-ira-muted block mt-1">{stat.label}</span>
                     </div>
                   ))}
