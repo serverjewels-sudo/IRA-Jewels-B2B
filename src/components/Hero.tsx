@@ -34,13 +34,13 @@ export default function Hero() {
         
         <div className="flex flex-wrap gap-3">
           <Link
-            href="#capabilities"
+            href="/manufacturing"
             className="inline-flex items-center justify-center gap-2.5 min-h-[52px] px-6 bg-ira-ivory text-ira-teal text-[12px] tracking-[0.08em] uppercase border border-ira-teal transition-all duration-250 hover:-translate-y-0.5 hover:bg-ira-gold hover:border-ira-gold hover:text-white max-md:w-full"
           >
             Explore Our Capabilities
           </Link>
           <Link
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center justify-center gap-2.5 min-h-[52px] px-6 bg-transparent text-ira-text text-[12px] tracking-[0.08em] uppercase border-2 border-ira-teal transition-all duration-250 hover:-translate-y-0.5 hover:bg-ira-teal hover:text-white max-md:w-full"
           >
             Start a Project

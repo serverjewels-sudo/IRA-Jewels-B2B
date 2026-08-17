@@ -147,9 +147,17 @@ export default function Header() {
       </header>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-ira-ivory z-[100] pt-[130px] px-7 pb-10 flex flex-col justify-between transition-transform duration-500 ease-in-out lg:hidden ${
-        isMenuOpen ? "translate-y-0" : "-translate-y-full"
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 bg-black/50 z-[99] lg:hidden transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* Mobile Menu Drawer */}
+      <div className={`fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-ira-ivory z-[100] pt-[130px] px-7 pb-10 flex flex-col justify-between transition-transform duration-500 ease-in-out lg:hidden ${
+        isMenuOpen ? "translate-x-0" : "translate-x-full"
       }`}>
         <nav className="grid gap-4">
           {[
@@ -159,14 +167,14 @@ export default function Header() {
               { name: "Insights", href: "/insights" },
               { name: "Contact", href: "/contact" }
           ].map((item) => (
-            <Link key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="font-serif text-4xl leading-none text-ira-teal">
+            <Link key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="font-serif text-2xl leading-none text-ira-teal">
               {item.name}
             </Link>
           ))}
-          <Link href="/apply" onClick={() => setIsMenuOpen(false)} className="font-serif text-4xl leading-none text-ira-gold mt-4">
+          <Link href="/apply" onClick={() => setIsMenuOpen(false)} className="font-serif text-xl leading-none text-ira-gold mt-4">
             Apply for Trade Account
           </Link>
-          <Link href="/login" onClick={() => setIsMenuOpen(false)} className="font-serif text-2xl leading-none text-ira-teal/70 mt-2">
+          <Link href="/login" onClick={() => setIsMenuOpen(false)} className="font-serif text-lg leading-none text-ira-teal/70 mt-2">
             Buyer Login
           </Link>
         </nav>

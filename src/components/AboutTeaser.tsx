@@ -6,19 +6,24 @@ export default function AboutTeaser() {
     <section className="py-[80px] max-md:py-[78px] bg-white">
       <div className="w-[calc(100%-56px)] mx-auto">
         <Reveal>
-          <div className="max-w-[900px] md:max-w-none mx-auto md:mx-0 text-center md:text-left">
-            <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-4">Who We Are</p>
-            
-            <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.2] text-ira-teal mb-6">
-              Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023 and backed by Divine Star, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
-            </h2>
-            
-            <Link 
-              href="/about" 
-              className="inline-flex items-center justify-center gap-2.5 min-h-[52px] px-8 bg-ira-teal text-white text-[12px] tracking-[0.08em] uppercase transition-all duration-250 hover:-translate-y-0.5 hover:bg-ira-teal/90 rounded-[5px]"
-            >
-              Learn More About Us
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div>
+              <img src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Who.jpeg" alt="Ira Jewels manufacturing workshop" className="w-full h-auto object-cover" />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold mb-4">Who We Are</p>
+              
+              <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.2] text-ira-teal mb-6">
+                Ira Jewels brings design thinking, manufacturing discipline and skilled craftsmanship together under one dependable process. Established in 2023 and backed by Divine Star, we support retailers, designers, wholesalers and international brands with a clear, confidential and production-focused approach.
+              </h2>
+              
+              <Link 
+                href="/about" 
+                className="inline-flex items-center justify-center gap-2.5 min-h-[52px] px-8 bg-ira-teal text-white text-[12px] tracking-[0.08em] uppercase transition-all duration-250 hover:-translate-y-0.5 hover:bg-ira-teal/90 rounded-[5px]"
+              >
+                Learn More About Us
+              </Link>
+            </div>
           </div>
         </Reveal>
       </div>
