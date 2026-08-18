@@ -30,7 +30,7 @@ export default function Home() {
       }} />
       <Header />
       <main>
-        <div className="relative pb-[100vh]">
+        <div className="relative">
           <div className="sticky top-0 h-screen z-0 overflow-hidden">
             <Hero />
           </div>
