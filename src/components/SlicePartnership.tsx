@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SlicePartnership() {
   return (
     <section className="relative h-full max-md:bg-ira-gold-beige flex flex-col items-center justify-center text-center px-6 md:px-12 md:items-start md:text-left">
@@ -16,6 +18,7 @@ export default function SlicePartnership() {
         <p className="text-black text-lg md:text-xl max-w-2xl mx-auto md:mx-0 md:mr-auto leading-relaxed">
           Confidential by default, dependable by design — the kind of partner serious jewellery brands build on for the long term.
         </p>
+        <Link href="/about" className="inline-flex items-center gap-2.5 mt-2 px-8 min-h-[52px] border border-ira-teal text-ira-teal text-[12px] tracking-[0.08em] uppercase transition-all duration-250 hover:bg-ira-teal hover:text-white">Our Partnership Approach</Link>
       </div>
     </section>
   );

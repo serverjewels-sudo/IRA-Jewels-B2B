@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SliceProcess() {
   return (
     <section className="relative h-full max-md:bg-ira-teal flex flex-col items-center justify-center text-center px-6 md:px-12 md:items-end md:text-right">
@@ -17,6 +19,7 @@ export default function SliceProcess() {
           From the first sketch to final quality check, every step is handled in-house — 
           precise, consistent, and built to scale with your brand.
         </p>
+        <Link href="/manufacturing" className="inline-flex items-center gap-2.5 mt-2 px-8 min-h-[52px] border border-white text-white text-[12px] tracking-[0.08em] uppercase transition-all duration-250 hover:bg-white hover:text-ira-teal">Explore Our Process</Link>
       </div>
     </section>
   );
