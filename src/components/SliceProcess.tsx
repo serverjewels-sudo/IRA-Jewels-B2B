@@ -13,7 +13,7 @@ export default function SliceProcess() {
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-white leading-tight">
           Every Piece Begins With a Promise of Precision
         </h2>
-        <p className="text-ira-ivory/80 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 md:ml-auto leading-relaxed">
+        <p className="text-white font-normal text-lg md:text-xl max-w-2xl mx-auto md:mx-0 md:ml-auto leading-relaxed">
           From the first sketch to final quality check, every step is handled in-house — 
           precise, consistent, and built to scale with your brand.
         </p>

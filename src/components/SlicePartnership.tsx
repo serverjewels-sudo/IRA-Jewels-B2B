@@ -13,7 +13,7 @@ export default function SlicePartnership() {
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-ira-teal leading-tight">
           A Manufacturing Partner You Can Build a Brand On
         </h2>
-        <p className="text-ira-muted text-lg md:text-xl max-w-2xl mx-auto md:mx-0 md:mr-auto leading-relaxed">
+        <p className="text-black text-lg md:text-xl max-w-2xl mx-auto md:mx-0 md:mr-auto leading-relaxed">
           Confidential by default, dependable by design — the kind of partner serious jewellery brands build on for the long term.
         </p>
       </div>
