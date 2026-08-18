@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SliceProcess from "@/components/SliceProcess";
+import SlicePartnership from "@/components/SlicePartnership";
 import TrustHighlights from "@/components/TrustHighlights";
 import AboutTeaser from "@/components/AboutTeaser";
 
@@ -28,7 +30,17 @@ export default function Home() {
       }} />
       <Header />
       <main>
-        <Hero />
+        <div className="relative pb-[100vh]">
+          <div className="sticky top-0 h-screen z-0 overflow-hidden">
+            <Hero />
+          </div>
+          <div className="sticky top-0 h-screen z-10 overflow-hidden">
+            <SliceProcess />
+          </div>
+          <div className="sticky top-0 h-screen z-20 overflow-hidden">
+            <SlicePartnership />
+          </div>
+        </div>
         <TrustHighlights />
         <AboutTeaser />
 
