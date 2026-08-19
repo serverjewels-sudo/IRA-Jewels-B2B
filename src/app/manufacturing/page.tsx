@@ -188,9 +188,9 @@ export default function ManufacturingPage() {
 
             <div className="grid gap-[18px]">
               {[
-                { num: "01", title: "Design & Development Workspace", img: getPlaceholderImage("mangalsutras", 1000) },
-                { num: "02", title: "Controlled Production Departments", img: getPlaceholderImage("bangles", 1000) },
-                { num: "03", title: "Skilled People & Quality Discipline", img: getPlaceholderImage("mens-jewellery", 1000) },
+                { num: "01", title: "Design & Development Workspace", img: "https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/WhatsApp%20Image%202026-08-14%20at%202.55.07%20PM.jpeg" },
+                { num: "02", title: "Controlled Production Departments", img: "https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/WhatsApp%20Image%202026-08-14%20at%202.55.09%20PM.jpeg" },
+                { num: "03", title: "Skilled People & Quality Discipline", img: "https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/WhatsApp%20Image%202026-08-14%20at%202.55.20%20PM.jpeg" },
               ].map((card, i) => (
                 <Reveal key={card.num} delay={i * 100}>
                   <article className="h-[400px] lg:h-[460px] relative overflow-hidden bg-[#d8d3ca]">
