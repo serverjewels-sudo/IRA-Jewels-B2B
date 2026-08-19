@@ -17,7 +17,7 @@ export default function Hero() {
         />
       </div>
       {/* Content */}
-      <div className="relative z-10 w-[calc(100%-56px)] mx-auto pb-[72px] max-md:pb-6 min-[1920px]:pl-12 min-[1920px]:pb-24">
+      <div className="relative z-10 w-[calc(100%-56px)] mx-auto pb-[72px] max-md:pb-6 md:pl-8 lg:pl-12 xl:pl-16 min-[1920px]:pl-24 min-[1920px]:pb-24">
         <div className="flex flex-col">
           <p className="text-black text-[11px] max-md:text-[10px] tracking-[0.18em] uppercase font-bold mb-6 max-md:mb-0 max-md:mt-4 order-1 max-md:order-2">
             B2B Jewellery Manufacturing Partner
