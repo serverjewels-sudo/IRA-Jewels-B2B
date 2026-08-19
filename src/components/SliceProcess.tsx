@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SliceProcess() {
   return (
-    <section className="relative h-full flex flex-col items-center max-md:justify-between md:justify-center max-md:py-16 text-center px-6 md:px-12 md:items-end md:text-right">
+    <section className="relative h-full flex flex-col items-center max-md:justify-end md:justify-center max-md:py-16 text-center px-6 md:px-12 md:items-end md:text-right">
       <img 
         src="https://upfqnvazerkervvxeugo.supabase.co/storage/v1/object/public/product-images/Image%201.jpeg" 
         alt="Process Background" 
@@ -18,15 +18,15 @@ export default function SliceProcess() {
         <span className="block text-[11px] tracking-[0.18em] uppercase font-bold text-ira-gold">
           Process
         </span>
-        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-white leading-tight">
+        <h2 className="font-serif text-4xl max-[412px]:text-[8.73vw] md:text-5xl lg:text-6xl xl:text-[72px] text-white leading-tight">
           Every Piece Begins With a Promise of Precision
         </h2>
-        <p className="text-white font-normal text-base md:text-xl max-w-2xl mx-auto md:mx-0 md:ml-auto leading-relaxed max-md:!mt-3">
+        <p className="text-white font-normal text-base max-[412px]:text-[3.88vw] md:text-xl max-w-2xl mx-auto md:mx-0 md:ml-auto leading-relaxed max-md:!mt-3">
           From the first sketch to final quality check, every step is handled in-house — 
           precise, consistent, and built to scale with your brand.
         </p>
       </div>
-      <Link href="/manufacturing" className="relative z-10 inline-flex items-center gap-2.5 md:mt-8 px-8 min-h-[52px] border border-white text-white text-[12px] tracking-[0.08em] uppercase transition-all duration-250 hover:bg-white hover:text-ira-teal">Explore Our Process</Link>
+      <Link href="/manufacturing" className="relative z-10 inline-flex items-center gap-2.5 mt-6 md:mt-8 px-8 min-h-[52px] border border-white text-white text-[12px] tracking-[0.08em] uppercase transition-all duration-250 hover:bg-white hover:text-ira-teal">Explore Our Process</Link>
     </section>
   );
 }

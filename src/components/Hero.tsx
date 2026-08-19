@@ -18,15 +18,17 @@ export default function Hero() {
       </div>
       {/* Content */}
       <div className="relative z-10 w-[calc(100%-56px)] mx-auto pb-[72px] max-md:pb-6 min-[1920px]:pl-12 min-[1920px]:pb-24">
-        <p className="text-[#d4b98c] text-[11px] max-md:text-[10px] tracking-[0.18em] uppercase font-bold mb-6 max-md:mb-4">
-          B2B Jewellery Manufacturing Partner
-        </p>
-        
-        <h1 className="font-serif text-[clamp(40px,6vw,88px)] max-md:text-[clamp(36px,10vw,52px)] min-[1920px]:text-[100px] leading-[0.96] tracking-[-0.045em] max-w-[930px]">
-          <span className="block text-ira-teal">We Craft</span>
-          <span className="block text-ira-teal">Jewellery Brands</span>
-          <span className="block font-serif-italic text-ira-gold">With Precision.</span>
-        </h1>
+        <div className="flex flex-col">
+          <p className="text-black text-[11px] max-md:text-[10px] tracking-[0.18em] uppercase font-bold mb-6 max-md:mb-0 max-md:mt-4 order-1 max-md:order-2">
+            B2B Jewellery Manufacturing Partner
+          </p>
+          
+          <h1 className="font-serif text-[clamp(40px,6vw,88px)] max-md:text-[clamp(36px,10vw,52px)] min-[1920px]:text-[100px] leading-[0.96] tracking-[-0.045em] max-w-[930px] order-2 max-md:order-1">
+            <span className="block text-ira-teal">We Craft</span>
+            <span className="block text-ira-teal">Jewellery Brands</span>
+            <span className="block font-serif-italic text-ira-teal">With Precision.</span>
+          </h1>
+        </div>
         
         <p className="max-w-[600px] my-[30px] max-md:my-5 text-ira-text text-[15px] max-md:text-[14px] max-[390px]:text-[12px] leading-relaxed">
           From first sketch to final shipment, Ira Jewels delivers design development, precision manufacturing and dependable production support for jewellery brands.
